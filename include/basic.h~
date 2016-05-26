@@ -1,0 +1,29 @@
+/* Aluno: Ingrid Santana Lopes - 14/0083065
+Universidade de Brasilia
+Organização e Arquitetura de Computadores - 1/2016
+Professor: Ricardo Jacobi */
+
+#ifndef BASIC_H
+#define BASIC_H
+
+#ifdef _WIN64
+#define CLEAR "cls" /*windows*/
+#else
+#define CLEAR "clear" /*linux e mac*/
+#endif
+
+
+/*função para considerar a conversão de binário para decimal como complemento de 2 para que se possa considerar os números negativos quando necessário*/
+int Complemento2(int x);
+
+/*função responsável por receber uma string de tamanho variavel formada por uma sequencia de 0 e 1 e a transformar no decimal correspondente*/
+int BinaryToDecimal(char binary[], int tam);
+
+/*função responsável pela conversão de um caractere em hexadecimal para seu valor correspondente em binário*/
+void HexaToBinary (char hexa, char binary[4]);
+
+bool detectaOverflow(uint32_t a, uint32_t b);
+
+size_t highestOneBitPosition(uint32_t a);
+
+#endif
